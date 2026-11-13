@@ -1,0 +1,12 @@
+[build]
+  command = "bash scripts/netlify-build.sh"
+  publish = "build/web"
+
+[build.environment]
+  FLUTTER_VERSION = "3.44.4"
+  API_BASE_URL = "https://server-rho-two-45.vercel.app"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
